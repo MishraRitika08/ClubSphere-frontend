@@ -78,7 +78,7 @@ const router=createBrowserRouter([
     path:"/profile",
     element:<Profile/>
   },{
-    path:"terms",
+    path:"/terms",
     element:<TermsPage/>
   },{path:"contactus",
     element:<ContactUs/>
