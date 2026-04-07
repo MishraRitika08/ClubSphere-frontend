@@ -39,6 +39,18 @@ const EventCard = ({ event, index }) => {
     hour: '2-digit', minute: '2-digit',
   });
 
+  // to fetch event
+  const club='HOBBY';
+   const getEvent = async () => {
+  try {
+    console.log(response.data);
+  } catch (error) {
+    console.error("Error fetching events:", error.response?.data || error.message);
+  }
+};
+
+getEvent();
+
   return (
     <div
       className="ue-card"
