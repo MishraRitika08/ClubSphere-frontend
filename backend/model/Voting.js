@@ -28,4 +28,6 @@ const votingModel= mongoose.Schema({
     
 },{timestamps:true})
 
+votingModel.index({ createdAt: -1 });
+
 export const  Voting =mongoose.model("Voting",votingModel);

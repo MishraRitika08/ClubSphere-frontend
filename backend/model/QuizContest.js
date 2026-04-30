@@ -20,4 +20,6 @@ const quizContestSchema = new mongoose.Schema(
     }
   });
 
+quizContestSchema.index({ userId: 1, contestId: 1, questionId: 1 }, { unique: true });
+
 export const QuizContest = mongoose.model("QuizContest", quizContestSchema);

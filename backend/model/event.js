@@ -15,4 +15,7 @@ const EventModel = mongoose.Schema({
   }
 },{timestamps: true});
 
+EventModel.index({ club: 1 });
+EventModel.index({ location: 1, start: 1, end: 1 });
+
 export default mongoose.model("Event", EventModel);

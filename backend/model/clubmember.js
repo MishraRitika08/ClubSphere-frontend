@@ -24,7 +24,7 @@ const clubMemberSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-// Ensure user can't join the same club twice
-// clubMemberSchema.index({ Club: 1, UserId: 1 }, { unique: true });
+clubMemberSchema.index({ Club: 1, UserId: 1 }, { unique: true });
+clubMemberSchema.index({ Club: 1, Status: 1 });
 
 export default mongoose.model("ClubMember", clubMemberSchema);

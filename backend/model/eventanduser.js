@@ -22,4 +22,7 @@ const event = mongoose.Schema({
 
 })
 
+event.index({ EventId: 1, UserId: 1 }, { unique: true });
+event.index({ EventId: 1, club: 1 });
+
 export default mongoose.model("EventUser", event);

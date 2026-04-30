@@ -16,4 +16,7 @@ const gallerySchema = new mongoose.Schema({
     }
 });
 
+gallerySchema.index({ EventId: 1 }, { unique: true });
+gallerySchema.index({ club: 1 });
+
 export default mongoose.model("Gallery", gallerySchema);

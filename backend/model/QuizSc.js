@@ -16,5 +16,7 @@ const QuizSchema=mongoose.Schema({
     correctAnswerCount: { type: Number, default: 0 }
 });
 
+QuizSchema.index({ UserId: 1, ContestId: 1 }, { unique: true });
+
 
 export const Quiz=mongoose.model("Quiz",QuizSchema);

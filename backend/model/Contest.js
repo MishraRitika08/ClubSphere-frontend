@@ -43,4 +43,6 @@ const ContestModel = mongoose.Schema({
     timestamps: true // Adds createdAt and updatedAt fields
 });
 
+ContestModel.index({ creator: 1, createdAt: -1 });
+
 export const Contest = mongoose.model("Contest", ContestModel);

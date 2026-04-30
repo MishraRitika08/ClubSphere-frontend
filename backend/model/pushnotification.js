@@ -12,6 +12,8 @@ const pushNotificationSchema = new mongoose.Schema({
    }
 });
 
+pushNotificationSchema.index({ userId: 1 }, { unique: true });
+
 const PushNotification = mongoose.model('PushNotification', pushNotificationSchema);
 
 export default PushNotification;

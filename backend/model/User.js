@@ -44,4 +44,6 @@ const userModel = mongoose.Schema(
   { timestamps: true }
 );
 
+userModel.index({ role: 1 });
+
 export const User = mongoose.model("User", userModel);

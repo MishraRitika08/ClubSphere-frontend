@@ -64,7 +64,7 @@ export const approvalToClub = async (req, res) => {
       body: `Your membership request to join ${membership.Club} has been accepted.`,
     });
     try {
-      const subscriptions = await PushNotification.find({}, "subscription");
+        const subscriptions = await PushNotification.find({ userId: membership.UserId }, "subscription");
 
       sendNotification(subscriptions, message);
     } catch (fcmError) {
