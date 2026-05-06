@@ -32,6 +32,7 @@ import Galleryedit from "./component/club/Galleryedit.jsx";
 import Member from "./component/club/Member.jsx";
 import ProtectedRouteAdmin from "./hook/adminCheck";
 import ProtectedRoute from "./hook/loginCheck";
+import Demo from "./component/Demo";
 
 const router = createBrowserRouter([
   {
@@ -157,6 +158,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <NotFound />,
+  },
+  {
+    path: "/demo",
+    element: <Demo />,
   },
 ]);
 
