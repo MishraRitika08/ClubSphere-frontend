@@ -19,6 +19,7 @@ import ClubCard from "./ClubCard";
 import { ClubsData } from '../util/constant';
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Demo from "./Demo";
 
 /* ─────────────────────────────────────────
    Magnetic Cursor
@@ -1003,7 +1004,7 @@ const Home = () => {
                 ) : (
                   <>
                     <Link to="/register" className="cs-btn-primary">Join Your Club Today</Link>
-                    <button className="cs-btn-secondary">Watch Demo</button>
+                    <Link to="/demo" className="cs-btn-secondary">Watch Demo</Link>
                   </>
                 )}
               </div>
